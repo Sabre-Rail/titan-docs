@@ -1,0 +1,21 @@
+site_name: Titan Docs
+site_url: https://DarrenPratt.github.io/titan-docs/
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Test Strategy: test-strategy.md
+  - Coding Standard: coding-standard.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code
+  - codehilite

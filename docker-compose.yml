@@ -1,0 +1,16 @@
+services:
+  mkdocs:
+    image: squidfunk/mkdocs-material
+    volumes:
+      - .:/docs
+    command: build
+    # This container exits after building the site.
+
+  docs-server:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+    depends_on:
+      - mkdocs

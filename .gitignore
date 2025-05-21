@@ -1,0 +1,16 @@
+# Ignore the built site directory
+/site/
+
+# Ignore Python environment files (if you use local pip)
+/venv/
+/.env/
+/__pycache__/
+
+# macOS & Windows system files
+.DS_Store
+Thumbs.db
+
+# Logs and local config
+*.log
+*.swp
+*.tmp

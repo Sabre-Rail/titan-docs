@@ -1,0 +1,877 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://DarrenPratt.github.io/titan-docs/on-boarding/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>🧭 Titan Developer Onboarding Guide - Titan Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#titan-developer-onboarding-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Titan Docs" class="md-header__button md-logo" aria-label="Titan Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Titan Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🧭 Titan Developer Onboarding Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../test-strategy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Strategy
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../coding-standard/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Coding Standard
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Titan Docs" class="md-nav__button md-logo" aria-label="Titan Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Titan Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coding-standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coding Standard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Project Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Project Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#titan3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗 Titan3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#titan4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Titan4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Migration Goal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Development Environment Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Development Environment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-required-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Required Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clone-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Clone Repositories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configure-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configure Secrets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-run-docker-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Run Docker Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verify
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Core Technologies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-start-learning-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Pre-Start Learning Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Pre-Start Learning Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-sourcing-cqrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Sourcing &amp; CQRS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net-aspnet-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      .NET &amp; ASP.NET Core
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containers &amp; Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      📐 Development Standards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Testing Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Security &amp; Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cicd-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 CI/CD Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onboarding-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      📆 Onboarding Timeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contacts-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧑‍💻 Contacts &amp; Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="titan-developer-onboarding-guide">🧭 Titan Developer Onboarding Guide<a class="headerlink" href="#titan-developer-onboarding-guide" title="Permanent link">&para;</a></h1>
+<p>Welcome to the Titan Development Team! This guide will help you understand the systems you'll be working on, set up your environment, and learn the technologies we use.</p>
+<hr />
+<h2 id="project-overview">📦 Project Overview<a class="headerlink" href="#project-overview" title="Permanent link">&para;</a></h2>
+<h3 id="titan3">🏗 Titan3<a class="headerlink" href="#titan3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Legacy system maintained in ASP.NET Core MVC</li>
+<li>Uses SQL Server and Entity Framework</li>
+<li>Monolithic with some modular separation</li>
+<li>Still live and operational for core business functions</li>
+</ul>
+<h3 id="titan4">🚀 Titan4<a class="headerlink" href="#titan4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Modular architecture using .NET 8/9</li>
+<li>Event Sourced with Marten on PostgreSQL</li>
+<li>Dockerized deployment (Dev/Prod parity)</li>
+<li>Designed to support long-term scalability and flexibility</li>
+<li>Custom-built authentication system under Titan 4 umbrella</li>
+</ul>
+<h3 id="migration-goal">🔄 Migration Goal<a class="headerlink" href="#migration-goal" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Gradually port Titan3 modules to Titan4</li>
+<li>Retain backward compatibility during transition</li>
+<li>Improve system observability, audit trails, and resilience</li>
+</ul>
+<hr />
+<h2 id="development-environment-setup">⚙️ Development Environment Setup<a class="headerlink" href="#development-environment-setup" title="Permanent link">&para;</a></h2>
+<h3 id="1-required-tools">1. Required Tools<a class="headerlink" href="#1-required-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://dotnet.microsoft.com/en-us/download">.NET SDK 8.0+</a></li>
+<li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a></li>
+<li><a href="https://visualstudio.microsoft.com/">Visual Studio 2022+</a></li>
+<li><a href="https://www.pgadmin.org/">PostgreSQL Client</a> (optional)</li>
+<li>Git + GitHub CLI</li>
+</ul>
+<h3 id="2-clone-repositories">2. Clone Repositories<a class="headerlink" href="#2-clone-repositories" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-org/titan3.git
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-org/titan4.git
+</code></pre></div>
+
+<h3 id="3-configure-secrets">3. Configure Secrets<a class="headerlink" href="#3-configure-secrets" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Setup <code>.env</code> files or <code>secrets.json</code> as per team lead instructions</li>
+<li>Update <code>appsettings.Development.json</code> with local connection strings</li>
+</ul>
+<h3 id="4-run-docker-services">4. Run Docker Services<a class="headerlink" href="#4-run-docker-services" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>--build
+</code></pre></div>
+
+<h3 id="5-verify">5. Verify<a class="headerlink" href="#5-verify" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Access Titan3 via <a href="http://localhost:5000">http://localhost:5000</a></li>
+<li>Access Titan4 via <a href="http://localhost:8080">http://localhost:8080</a></li>
+</ul>
+<hr />
+<h2 id="core-technologies">🧱 Core Technologies<a class="headerlink" href="#core-technologies" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Marten</strong></td>
+<td>Event storage and projections</td>
+</tr>
+<tr>
+<td><strong>PostgreSQL</strong></td>
+<td>Event and read model database</td>
+</tr>
+<tr>
+<td><strong>Docker</strong></td>
+<td>Containerized deployment for local and prod</td>
+</tr>
+<tr>
+<td><strong>Titan.Auth</strong></td>
+<td>Custom authentication and authorization system</td>
+</tr>
+<tr>
+<td><strong>ASP.NET Core MVC</strong></td>
+<td>Web and API architecture</td>
+</tr>
+<tr>
+<td><strong>EF Core</strong></td>
+<td>Data access in legacy Titan3</td>
+</tr>
+<tr>
+<td><strong>QuestPDF</strong></td>
+<td>Document generation (e.g., AWK PDFs)</td>
+</tr>
+<tr>
+<td><strong>Serilog</strong></td>
+<td>Structured logging</td>
+</tr>
+<tr>
+<td><strong>xUnit / Playwright</strong></td>
+<td>Unit and end-to-end testing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pre-start-learning-resources">📚 Pre-Start Learning Resources<a class="headerlink" href="#pre-start-learning-resources" title="Permanent link">&para;</a></h2>
+<h3 id="event-sourcing-cqrs">Event Sourcing &amp; CQRS<a class="headerlink" href="#event-sourcing-cqrs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing">Event Sourcing Pattern – Microsoft</a></li>
+<li><a href="https://martendb.io/events/">Marten Event Sourcing Docs</a></li>
+<li><a href="https://www.youtube.com/watch?v=LDW0QWie21s">Intro to Event Sourcing – YouTube</a></li>
+</ul>
+<h3 id="net-aspnet-core">.NET &amp; ASP.NET Core<a class="headerlink" href="#net-aspnet-core" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/training/paths/build-web-api-aspnet-core/">Build Web API with ASP.NET Core</a></li>
+<li><a href="https://learn.microsoft.com/en-us/training/modules/build-web-app-with-aspnet-core-mvc/">Razor Pages &amp; MVC</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection">Dependency Injection in .NET</a></li>
+</ul>
+<h3 id="containers-docker">Containers &amp; Docker<a class="headerlink" href="#containers-docker" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/">Docker for .NET Devs</a></li>
+<li><a href="https://docs.docker.com/get-started/">Docker Get Started Guide</a></li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose Basics</a></li>
+</ul>
+<h3 id="postgresql">PostgreSQL<a class="headerlink" href="#postgresql" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.postgresqltutorial.com/">PostgreSQL for Developers</a></li>
+<li><a href="https://learn.microsoft.com/en-us/ef/core/providers/npgsql/">EF Core + Npgsql</a></li>
+</ul>
+<hr />
+<h2 id="development-standards">📐 Development Standards<a class="headerlink" href="#development-standards" title="Permanent link">&para;</a></h2>
+<ul>
+<li>✅ Naming conventions (PascalCase for classes, camelCase for variables)</li>
+<li>✅ DI via constructor injection</li>
+<li>✅ Avoid magic strings/constants – use enums or config</li>
+<li>✅ GitHub Flow: <code>main</code> for release, <code>dev</code> for integration, features as <code>feature/xyz</code></li>
+<li>✅ Commit messages follow: <code>feat:</code>, <code>fix:</code>, <code>refactor:</code>, <code>docs:</code>, <code>test:</code></li>
+</ul>
+<hr />
+<h2 id="testing-strategy">🧪 Testing Strategy<a class="headerlink" href="#testing-strategy" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Tool</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit Tests</td>
+<td>xUnit</td>
+<td>Write for service logic, projections</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>xUnit + Testcontainers</td>
+<td>Validate end-to-end flows</td>
+</tr>
+<tr>
+<td>UI Testing</td>
+<td>Playwright</td>
+<td>Smoke tests for key user flows</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="security-permissions">🔐 Security &amp; Permissions<a class="headerlink" href="#security-permissions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Titan.Auth handles token issuance and user authentication</li>
+<li>Roles and permissions managed within the Titan 4 custom auth system</li>
+<li>Sensitive APIs require <code>[RequirePermission("xyz")]</code> attributes</li>
+<li>Permissions are dynamically checked against Titan.Auth, not hardcoded</li>
+</ul>
+<hr />
+<h2 id="cicd-overview">🚀 CI/CD Overview<a class="headerlink" href="#cicd-overview" title="Permanent link">&para;</a></h2>
+<ul>
+<li>GitHub Actions for build/test/lint</li>
+<li>Containers pushed to GHCR or private registry</li>
+<li>Staging environment deployed on merge to <code>main</code></li>
+<li>Releases tagged via <code>release.yml</code></li>
+</ul>
+<hr />
+<h2 id="onboarding-timeline">📆 Onboarding Timeline<a class="headerlink" href="#onboarding-timeline" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Goals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pre-Start</td>
+<td>Review learning material, install tools</td>
+</tr>
+<tr>
+<td>Week 1</td>
+<td>Set up environment, explore Titan3/Titan4 codebases</td>
+</tr>
+<tr>
+<td>Week 2</td>
+<td>Fix bugs in Titan3, assist on Titan4 events</td>
+</tr>
+<tr>
+<td>Week 3</td>
+<td>Begin porting a Titan3 module to Titan4</td>
+</tr>
+<tr>
+<td>Week 4+</td>
+<td>Take ownership of a service in Titan4 and help plan migration strategy</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="contacts-support">🧑‍💻 Contacts &amp; Support<a class="headerlink" href="#contacts-support" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Role</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Darren Pratt</td>
+<td>Digital Services Manager</td>
+<td><a href="mailto:darren.pratt@sabrerail.com">darren.pratt@sabrerail.com</a></td>
+</tr>
+<tr>
+<td>[Mentor Name]</td>
+<td>Lead Developer</td>
+<td>[email]</td>
+</tr>
+<tr>
+<td>IT Support</td>
+<td>Environment/Access</td>
+<td>itsupport@[domain].com</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Welcome aboard and happy building! 💻🚀</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

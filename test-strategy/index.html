@@ -1,0 +1,856 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://DarrenPratt.github.io/titan-docs/test-strategy/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../coding-standard/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Test Strategy - Titan Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#test-strategy-document-sabre-rail-services-ltd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Titan Docs" class="md-header__button md-logo" aria-label="Titan Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Titan Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Test Strategy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Strategy
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../coding-standard/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Coding Standard
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Titan Docs" class="md-nav__button md-logo" aria-label="Titan Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Titan Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Test Strategy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Strategy
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-test-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Test Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Test Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-unit-testing-xunit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Unit Testing (xUnit)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-integration-testing-xunit-testserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Integration Testing (xUnit + TestServer)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-end-to-end-testing-playwright" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 End-to-End Testing (Playwright)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tooling-and-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Tooling and Frameworks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Project Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cicd-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. CI/CD Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-quality-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Quality Gates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-maintenance-and-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Maintenance and Ownership
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coding-standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coding Standard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-test-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Test Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Test Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-unit-testing-xunit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Unit Testing (xUnit)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-integration-testing-xunit-testserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Integration Testing (xUnit + TestServer)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-end-to-end-testing-playwright" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 End-to-End Testing (Playwright)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tooling-and-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Tooling and Frameworks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Project Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cicd-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. CI/CD Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-quality-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Quality Gates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-maintenance-and-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Maintenance and Ownership
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="test-strategy-document-sabre-rail-services-ltd">Test Strategy Document – Sabre Rail Services Ltd<a class="headerlink" href="#test-strategy-document-sabre-rail-services-ltd" title="Permanent link">&para;</a></h1>
+<p><strong>Project:</strong> Titan Platform<br />
+<strong>Document Version:</strong> 1.0<br />
+<strong>Prepared by:</strong> D. L. Pratt<br />
+<strong>Date:</strong> [Insert Date]</p>
+<hr />
+<h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h2>
+<p>This document defines the test strategy for the Titan system, covering automated testing practices using <strong>xUnit</strong> for unit and integration tests, and <strong>Playwright</strong> for end-to-end (E2E) UI testing.</p>
+<h3 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ensure code quality through automated testing.</li>
+<li>Standardize test tools and patterns across projects.</li>
+<li>Facilitate CI/CD integration and reliable regression testing.</li>
+</ul>
+<hr />
+<h2 id="2-test-types">2. Test Types<a class="headerlink" href="#2-test-types" title="Permanent link">&para;</a></h2>
+<h3 id="21-unit-testing-xunit">2.1 Unit Testing (xUnit)<a class="headerlink" href="#21-unit-testing-xunit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Covers individual methods and business logic.</li>
+<li>Mocking dependencies using <strong>Moq</strong>.</li>
+<li>Test naming convention: <code>MethodName_Condition_ExpectedOutcome</code></li>
+<li>Test pattern: <strong>Arrange–Act–Assert (AAA)</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="na">[Fact]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CalculateTotal_WithValidInputs_ReturnsCorrectSum</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Arrange</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">calculator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Calculator</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Act</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculator</span><span class="p">.</span><span class="n">CalculateTotal</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Assert</span>
+<span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="22-integration-testing-xunit-testserver">2.2 Integration Testing (xUnit + TestServer)<a class="headerlink" href="#22-integration-testing-xunit-testserver" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tests multiple components working together.</li>
+<li>Use <code>WebApplicationFactory&lt;T&gt;</code> for ASP.NET Core APIs.</li>
+<li>Configure test DB (e.g., SQLite in-memory or TestContainers for PostgreSQL).</li>
+</ul>
+<h3 id="23-end-to-end-testing-playwright">2.3 End-to-End Testing (Playwright)<a class="headerlink" href="#23-end-to-end-testing-playwright" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Browser-based tests simulating real user interactions.</li>
+<li>Written in TypeScript or C# via Microsoft.Playwright.</li>
+<li>Run headless in CI pipelines, with video and trace capture enabled.</li>
+<li>Base URLs are injected via environment variables.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Visitor login should show dashboard&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">BASE_URL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;/login&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#username&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;testuser&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#password&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;P@ssword123&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;button[type=submit]&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">).</span><span class="nx">toHaveURL</span><span class="p">(</span><span class="sr">/.*dashboard/</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<hr />
+<h2 id="3-tooling-and-frameworks">3. Tooling and Frameworks<a class="headerlink" href="#3-tooling-and-frameworks" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit Testing</td>
+<td>xUnit</td>
+</tr>
+<tr>
+<td>Mocking</td>
+<td>Moq</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>xUnit + WebApplicationFactory</td>
+</tr>
+<tr>
+<td>E2E Testing</td>
+<td>Microsoft.Playwright</td>
+</tr>
+<tr>
+<td>Test Reporting</td>
+<td>Playwright Traces / Test Output Logs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-project-structure">4. Project Structure<a class="headerlink" href="#4-project-structure" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>/tests
+├── Titan.App.UnitTests          # xUnit unit tests
+├── Titan.App.IntegrationTests   # Integration tests
+└── Titan.App.E2ETests           # Playwright tests
+</code></pre></div>
+
+<hr />
+<h2 id="5-cicd-integration">5. CI/CD Integration<a class="headerlink" href="#5-cicd-integration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All test projects are executed in GitHub Actions.</li>
+<li>Unit + integration tests run on <code>.NET 8</code> matrix.</li>
+<li>E2E tests run in parallel using <code>npx playwright test</code>.</li>
+<li>Playwright artifacts (videos, traces, screenshots) are uploaded on failure.</li>
+</ul>
+<hr />
+<h2 id="6-quality-gates">6. Quality Gates<a class="headerlink" href="#6-quality-gates" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit Test Coverage</td>
+<td>80% minimum</td>
+</tr>
+<tr>
+<td>Integration Test Pass</td>
+<td>100% required</td>
+</tr>
+<tr>
+<td>E2E Test Stability Rate</td>
+<td>95%+ over 3 runs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-best-practices">7. Best Practices<a class="headerlink" href="#7-best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Test only public behavior, not implementation details.</li>
+<li>Isolate unit tests from external dependencies.</li>
+<li>Avoid flaky tests by ensuring stable selectors in Playwright.</li>
+<li>Prefer <code>[Theory]</code> + <code>[InlineData]</code> for reusable xUnit tests.</li>
+<li>Mark slow or unstable tests with <code>[Trait("Category", "Slow")]</code>.</li>
+</ul>
+<hr />
+<h2 id="8-maintenance-and-ownership">8. Maintenance and Ownership<a class="headerlink" href="#8-maintenance-and-ownership" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Test ownership lies with the same team responsible for the corresponding feature.</li>
+<li>Tests must be updated alongside the feature.</li>
+<li>Broken tests in <code>main</code> block merges until resolved.</li>
+</ul>
+<hr />
+<p><strong>End of Document</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
